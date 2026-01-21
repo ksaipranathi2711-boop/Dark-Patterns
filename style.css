@@ -1,0 +1,74 @@
+/* Dark Theme, Colors & Animations */
+*{box-sizing:border-box;margin:0;padding:0;font-family:'Roboto',sans-serif;}
+body{background:#121212;color:#e0e0e0;line-height:1.6;transition:0.5s;}
+a{color:#00bcd4;text-decoration:none;transition:0.3s;} a:hover{color:#ff9800;}
+button{cursor:pointer;transition:0.3s;}
+
+/* Navbar */
+nav{display:flex;justify-content:space-between;align-items:center;background:#1f1f1f;padding:1rem 2rem;position:sticky;top:0;z-index:1000;}
+nav .logo{font-weight:700;font-size:1.5rem;}
+nav ul{list-style:none;display:flex;}
+nav ul li{margin-left:1.5rem;}
+nav ul li a{color:#e0e0e0;}
+.burger{display:none;flex-direction:column;cursor:pointer;}
+.burger div{width:25px;height:3px;background:#e0e0e0;margin:4px;transition:0.3s;}
+
+/* Header */
+header{text-align:center;padding:5rem 2rem;background:#1a1a1a;}
+header h1{font-size:2.5rem;margin-bottom:1rem;opacity:0;animation:fadeIn 1s forwards;}
+header p{font-size:1.2rem;margin-bottom:2rem;opacity:0;animation:fadeIn 1s forwards 0.5s;}
+.download-btn{padding:.8rem 2rem;font-size:1rem;background:#00bcd4;color:#121212;border:none;border-radius:5px;opacity:0;animation:fadeIn 1s forwards 1s;}
+.download-btn:hover{background:#0097a7;color:#fff;transform:scale(1.05);}
+
+/* Features */
+.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:2rem;padding:4rem 2rem;background:#1f1f1f;}
+.feature-box{background:#2a2a2a;padding:2rem;border-radius:10px;text-align:center;box-shadow:0 2px 5px rgba(0,0,0,0.5);opacity:0;transform:translateY(30px);transition:all 0.5s;}
+.feature-box.animate{opacity:1;transform:translateY(0);}
+
+/* About & Demo */
+.about,.demo{text-align:center;padding:4rem 2rem;}
+.demo textarea{width:100%;max-width:500px;height:100px;padding:.5rem;background:#2a2a2a;border:1px solid #444;border-radius:5px;color:#e0e0e0;margin-bottom:1rem;}
+.demo button{padding:.7rem 1.5rem;background:#00bcd4;border:none;color:white;border-radius:5px;}
+.demo button:hover{background:#ff9800;transform:scale(1.05);}
+#demo-result{margin-top:1rem;padding:1rem;background:#2a2a2a;border-radius:5px;min-height:50px;}
+
+/* Footer */
+footer{background:#1f1f1f;color:#e0e0e0;text-align:center;padding:2rem;}
+footer a:hover{color:#ff9800;}
+
+/* Chatbot */
+#chatbot-btn{position:fixed;bottom:20px;right:20px;background:#00bcd4;border:none;color:white;padding:1rem;border-radius:50%;font-size:1.5rem;z-index:1000;transform:scale(1);transition:transform .3s;}
+#chatbot-btn:hover{transform:scale(1.2);}
+#chat-popup{display:none;position:fixed;bottom:80px;right:20px;width:300px;max-height:400px;background:#1f1f1f;border-radius:10px;box-shadow:0 5px 15px rgba(0,0,0,0.5);overflow:hidden;flex-direction:column;z-index:1000;}
+#chat-header{background:#00bcd4;color:white;padding:1rem;font-weight:bold;display:flex;justify-content:space-between;align-items:center;}
+#chat-messages{flex:1;padding:1rem;overflow-y:auto;max-height:250px;}
+#chat-input{display:flex;border-top:1px solid #444;}
+#chat-input input{flex:1;padding:.5rem;border:none;background:#2a2a2a;color:#e0e0e0;}
+#chat-input button{background:#00bcd4;color:white;border:none;padding:0 1rem;}
+#chat-input button:hover{background:#ff9800;}
+
+/* Login Modal */
+#login-modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.8);justify-content:center;align-items:center;z-index:2000;}
+.login-box{background:#1f1f1f;padding:2rem;border-radius:10px;width:300px;text-align:center;}
+.login-box input{width:100%;margin-bottom:1rem;padding:.5rem;border:1px solid #444;border-radius:5px;background:#2a2a2a;color:#e0e0e0;}
+.login-box button{width:48%;padding:.5rem;margin:.5%;background:#00bcd4;border:none;color:white;border-radius:5px;}
+.login-box button:hover{background:#ff9800;}
+
+/* Cookie Banner */
+#cookie-banner{position:fixed;bottom:0;width:100%;background:#2a2a2a;color:#e0e0e0;text-align:center;padding:1rem;display:flex;justify-content:center;align-items:center;z-index:3000;}
+#cookie-banner button{margin-left:.5rem;padding:.3rem .7rem;border:none;border-radius:5px;cursor:pointer;}
+#cookie-banner button#accept-cookies{background:#00bcd4;color:#121212;}
+#cookie-banner button#decline-cookies{background:#ff9800;color:#121212;}
+
+/* Responsive Navbar */
+@media(max-width:768px){
+    nav ul{display:none;flex-direction:column;width:100%;background:#1f1f1f;}
+    nav ul.active{display:flex;}
+    .burger{display:flex;}
+}
+
+/* Animations */
+@keyframes fadeIn{to{opacity:1;}}
+.fade-in{opacity:0;animation:fadeIn 1s forwards;}
+.delay1{animation-delay:.5s;}
+.delay2{animation-delay:1s;}

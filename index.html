@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DarkPatternAI - Detect Dark Patterns</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://unpkg.com/gpt4all-js/dist/gpt4all.min.js"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav>
+    <div class="logo">DarkPatternAI</div>
+    <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#demo">Demo</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#" id="login-link">Login</a></li>
+    </ul>
+    <div class="burger">
+        <div></div><div></div><div></div>
+    </div>
+</nav>
+
+<!-- Header / Hero -->
+<header id="home">
+    <h1 class="fade-in">Detect Dark Patterns in Real Time</h1>
+    <p class="fade-in delay1">Protect your privacy and make informed decisions online with AI-powered browser extension.</p>
+    <button class="download-btn fade-in delay2" id="download-btn">Download Extension</button>
+</header>
+
+<!-- Features -->
+<section class="features" id="features">
+    <div class="feature-box animate">
+        <h3>Real-Time Detection</h3>
+        <p>Analyze pop-ups and banners instantly to spot deceptive interfaces.</p>
+    </div>
+    <div class="feature-box animate">
+        <h3>AI & NLP Powered</h3>
+        <p>Smart algorithms identify hidden manipulations in language and design.</p>
+    </div>
+    <div class="feature-box animate">
+        <h3>User Notifications</h3>
+        <p>Get instant warnings before you unknowingly share data.</p>
+    </div>
+    <div class="feature-box animate">
+        <h3>Privacy Focused</h3>
+        <p>We respect your data while protecting you from unethical UI tricks.</p>
+    </div>
+</section>
+
+<!-- About -->
+<section class="about" id="about">
+    <h2>Why DarkPatternAI?</h2>
+    <p>Dark patterns are deceptive UI/UX tricks that mislead users into actions they didn't intend. 
+    Our AI-powered browser extension detects these patterns in real-time, promotes transparency, 
+    and empowers users to make informed decisions online.</p>
+</section>
+
+<!-- Demo -->
+<section class="demo" id="demo">
+    <h2>Try a Demo</h2>
+    <p>Paste any website text below to detect potential dark patterns:</p>
+    <textarea id="demo-text" placeholder="Enter UI text here..." rows="6"></textarea>
+    <button id="analyze-btn">Analyze</button>
+
+    <div id="demo-result" style="margin-top: 15px;"></div>
+</section>
+
+
+<!-- Footer -->
+<footer id="contact">
+    <p>&copy; 2026 DarkPatternAI. All Rights Reserved.</p>
+    <p>
+        <a href="#">Privacy Policy</a> |
+        <a href="#">Terms of Service</a> |
+        <a href="#">Contact Us</a>
+    </p>
+</footer>
+
+<!-- Chatbot Button -->
+<button id="chatbot-btn">🤖</button>
+
+<!-- Chat Popup -->
+<div id="chat-popup">
+    <div id="chat-header">Chat with AI <span id="close-chat">✖</span></div>
+    <div id="chat-messages"></div>
+    <div id="chat-input">
+        <input type="text" id="chat-text" placeholder="Type a message...">
+        <button id="send-btn">Send</button>
+    </div>
+</div>
+
+<!-- Login Modal -->
+<div id="login-modal">
+    <div class="login-box">
+        <h2>Login</h2>
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+        <button id="login-btn">Login</button>
+        <button id="close-login">Cancel</button>
+    </div>
+</div>
+
+<!-- Cookie Consent -->
+<div id="cookie-banner">
+    <p>We use cookies to improve your experience. 
+    <button id="accept-cookies">Accept</button> 
+    <button id="decline-cookies">Decline</button>
+    </p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
